@@ -15,7 +15,7 @@ body
 	padding: 20px 30px;
 	max-width: calc(100vw - 40px);
 	font-family: monospace;
-	position: relative;
+	position: sticky;
 }
 
 h2
@@ -131,6 +131,7 @@ h3
     width: 99.8%;
     left: -0.5%;
     height: 56%;
+	    margin-top: 5%;
 }
 
 h4 
