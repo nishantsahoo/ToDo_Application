@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nagarro_Assignment_ToDoApp</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  	<div class="form">
+  		<h2>ToDo Application</h2>
+  		<h3>You have <span id="NoOfThings"></span> things to do!</h3>
+  		<input id="ToDoInput" placeholder="Write your ToDo Task here!"></input>
+  		<button id="ToDoButton">Add ToDo</button>  	
+  		<div class="listblock" id="style-1">
+  			<h4>ToDo List:</h4>
+  			<ol id="ToDoList"></ol>
+  		</div>
+  	</div>
+    	<script>
+    	function doClick(buttonName,e)
+		{
+		  // The purpose of this function is to allow the enter key to
+		  // point to the correct button to click.
+		  var ev = e || window.event;
+		  var key = ev.keyCode;
+
+		  if (key == 13)
+		  {
+		     // Get the button the user wants to have clicked
+		     var btn = document.getElementById(buttonName);
+		     if (btn != null)
+		     { 
+		        // If we find the button click it
+		        btn.click();
+		        ev.preventDefault(); 
+		     }
+		  }
+		}
+    	var NoOfThings = document.getElementById('NoOfThings');
+		var input = document.getElementById('ToDoInput');
+		var button = document.getElementById('ToDoButton');
+		var toDoList = document.getElementById('ToDoList');
+		var list = "";
+		var counter = 0;
+		NoOfThings.innerHTML = counter;
+
+		input.onkeypress = function(e) {
+       		doClick('ToDoButton', e);
+       	}
+		button.onclick = function() {
+			var inputVal = input.value;
+				if (inputVal == "") {
+					alert("Please enter a ToDo");
+				}
+				else {
+					list = '<li>' + inputVal + '</li>' + list;
+					input.value = "";
+					toDoList.innerHTML = list;
+					counter++;
+				}
+		}
+	</script>
+</body>
+</html>
