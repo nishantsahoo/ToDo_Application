@@ -50,12 +50,15 @@
 			var inputVal = input.value;
 				if (inputVal == "") {
 					alert("Please enter a ToDo");
+					NoOfThings.innerHTML = counter;
 				}
 				else {
 					list = '<li>' + inputVal + '</li>' + list;
 					input.value = "";
 					toDoList.innerHTML = list;
 					counter++;
+					NoOfThings.innerHTML = counter;
+
 				}
 		}
 	</script>
