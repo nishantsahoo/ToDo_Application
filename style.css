@@ -5,12 +5,12 @@ body
 }
 .form
 {
-	width: 30%;
+	width: 35%;
 	height: 60%;
 	background: #e6e6e6;
 	border-radius: 8px;
 	box-shadow: 0 0 40px -10px #000;
-	margin-left: 32.5%;
+	margin-left: 30.5%;
 	margin-top: 4.5%;
 	padding: 20px 30px;
 	font-family: monospace;
@@ -126,7 +126,7 @@ h3
 .listblock
 {
 	overflow-y: auto;
-    position: fixed;
+    position: inherit;
     width: 99.8%;
     left: -0.5%;
 	margin-top: 5%;
